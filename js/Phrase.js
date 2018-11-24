@@ -5,7 +5,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
     //this method adds letter placeholders to the display when the game starts
     addPhraseToDisplay() {
-
+        document.createElement('li');
     }
 
     // this method checks to see if letter selected by player matches a letter in the phrase
