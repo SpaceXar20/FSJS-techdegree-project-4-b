@@ -5,8 +5,10 @@ class Game {
     }
 
     //this method randomly retrieves one of the phrases stored in the phrases array.
-    getRandomPhrase() {
-
+    getRandomPhrase() { //I used a code snippet from this webiste https://medium.freecodecamp.org/creating-a-bare-bones-quote-generator-with-javascript-and-html-for-absolute-beginners-5264e1725f08
+        //I made a variable and named it randomPhrase, I use the math floor and random methods to get a random whole number from the phrases array
+        const randomPhrase = Math.floor(Math.random() * (phrases.length));
+        console.log(randomPhrase);
     }
 
     /*this method checks to see if the button clicked by the player matches a letter in the phrase.
