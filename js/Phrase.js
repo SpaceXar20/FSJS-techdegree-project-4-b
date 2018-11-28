@@ -25,7 +25,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     checkLetter() {
     const individualKeys = document.getElementById('key')
     if (individualKeys.includes(this.phrases)) {
-
+        return true;
      } 
     }
 
