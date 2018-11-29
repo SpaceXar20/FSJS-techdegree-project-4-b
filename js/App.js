@@ -11,7 +11,7 @@ document.getElementById('qwerty').addEventListener("click", function(){
  creates a new Game object, 
  and starts the game. */
 document.getElementById('btn__reset').addEventListener("click", function(){
-    App.resetDisplay();
+    resetDisplay();
 });
 
 
