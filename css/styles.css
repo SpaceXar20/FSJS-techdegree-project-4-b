@@ -16,6 +16,18 @@
   --transition: all .2s ease-in-out;
 }
 
+#game-over-message { /* The message when the player loses is hidden initially */
+  display: none;
+}
+
+.game-won-message { /* The message is hidden until the player actually wins */
+  display: none;
+}
+
+input[type=button]:disabled { /* This will turn the buttons into a different color once they become disabled */
+  color: #37474F /* I used a code snippet from this source: https://www.geeksforgeeks.org/css-disabled-selector/ */
+}
+
 /* main */
 
 * {
