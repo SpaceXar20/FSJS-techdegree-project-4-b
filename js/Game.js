@@ -43,7 +43,7 @@ class Game {
     removeLife() {
         const hideLives = document.getElementById('tries').style.display = 'none'; //this removes lives
         if (checkLetter === false) {
-            hideLives
+            this.missed = +1;
         }
 
 
@@ -60,8 +60,15 @@ class Game {
 
     //this method displays a message if the player wins or a different message if they lose.
     gameOver() {
+        //if the player loses 5 lives, display the game over mesage from index.html
+        if (missed === 5) {
+            document.getElementById('game-over-message').style.display = ""; //I used a code snippet from this source https://stackoverflow.com/questions/7420109/what-does-style-display-actually-do
 
-    }
+        } else (missed ===0) {
+            
+        }
+                      
+    } 
 
     /* this method calls the getRandomPhrase() method,
  and adds that phrase to the board by calling the Phrase class' addPhraseToDisplay() method. */
