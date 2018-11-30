@@ -11,10 +11,15 @@ class Phrase { //The class should include a constructor that accepts a phrase as
        //Create a reference to parent element
         const myList = document.getElementById('myList');
 
-        //New list items
+        //Crete new list items
         let newListItem = document.createElement('li');
-        newListItem.textContent = 'my phrase array needs to be here';
+        newListItem = document.cl
+        newListItem.textContent = 'my array needs to be here';
 
+        //Give the li element a class name to hide them
+        newListItem.classList.add('hide letter');
+
+        //Append the created li element to parent element
         myList.appendChild(newListItem);
 
        /*if the player matches a letter, the empty box is replaced with the matched letter
