@@ -8,17 +8,17 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     addPhraseToDisplay() {
         //I used the following video as a reference: https://www.youtube.com/watch?v=e0ihEHxd6vI
 
-       //Create a reference to parent element
+       //Create a reference to ul element
         const myList = document.getElementById('myList');
 
         //Crete new list items
         let newListItem = document.createElement('li');
-        newListItem.textContent = ('my array needs to be here');
+        newListItem.textContent = (this.phrases);
 
         //Give the li element a class name to hide them
         newListItem.className += 'hide letter';
 
-        //Append the created li element to parent element
+        //Append the created li element to ul element
         myList.appendChild(newListItem);
 
        /*if the player matches a letter, the empty box is replaced with the matched letter
