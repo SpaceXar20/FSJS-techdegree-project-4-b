@@ -13,11 +13,10 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
         //Crete new list items
         let newListItem = document.createElement('li');
-        newListItem = document.cl
-        newListItem.textContent = 'my array needs to be here';
+        newListItem.textContent = ('my array needs to be here');
 
         //Give the li element a class name to hide them
-        newListItem.classList.add('hide letter');
+        newListItem.className += 'hide letter';
 
         //Append the created li element to parent element
         myList.appendChild(newListItem);

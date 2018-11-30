@@ -29,4 +29,6 @@ function markButton() {
     game.handleInteraction();
 }
 
+game.startGame();
+
 
