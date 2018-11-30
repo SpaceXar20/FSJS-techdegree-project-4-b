@@ -1,6 +1,3 @@
-//use a method to create new instances of the Phrase class
-const phrase = new Phrase;
-
 class Game {
     constructor() {
         this.missed = 0; // this property will be used as a counter for the total of 5 tries
@@ -72,6 +69,11 @@ class Game {
  and adds that phrase to the board by calling the Phrase class' addPhraseToDisplay() method. */
  startGame() {
      this.getRandomPhrase();
+
+     //use a method to create new instances of the Phrase class
+const phrase = new 
+Phrase(this.getRandomPhrase());
      phrase.addPhraseToDisplay();
+     return this.getRandomPhrase
  }
 }
