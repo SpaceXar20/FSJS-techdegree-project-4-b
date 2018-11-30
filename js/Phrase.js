@@ -6,11 +6,17 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     //this method adds letter placeholders to the display when the game starts
     //I need to dynamically create list items and append them to the div="phrase" in html file
     addPhraseToDisplay() {
-        //create a li element
-       var lettersLi = document.createElement('li');
-       // append li element to div 
-       const divPhrase = document.getElementById('phrase');
-       divPhrase.appendChild(lettersLi);    
+        //I used the following video as a reference: https://www.youtube.com/watch?v=e0ihEHxd6vI
+
+       //Create a reference to parent element
+        const myList = document.getElementById('myList');
+
+        //New list items
+        let newListItem = document.createElement('li');
+        newListItem.textContent = 'my phrase array needs to be here';
+
+        myList.appendChild(newListItem);
+
        /*if the player matches a letter, the empty box is replaced with the matched letter
        I think I will have to call the showMatchedLetter when theres a match
        */   
