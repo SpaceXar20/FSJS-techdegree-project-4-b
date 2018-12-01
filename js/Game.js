@@ -68,12 +68,11 @@ class Game {
     /* this method calls the getRandomPhrase() method,
  and adds that phrase to the board by calling the Phrase class' addPhraseToDisplay() method. */
  startGame() {
-     this.getRandomPhrase();
-
-     //use a method to create new instances of the Phrase class
+     
+//use a method to create new instances of the Phrase class
 const phrase = new 
 Phrase(this.getRandomPhrase());
      phrase.addPhraseToDisplay();
-     return this.getRandomPhrase
+     return this.getRandomPhrase();
  }
 }

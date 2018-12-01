@@ -13,7 +13,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
         //Crete new list items
         let newListItem = document.createElement('li');
-        newListItem.textContent = (this.phrases);
+        newListItem.textContent =  game.getRandomPhrase();
 
         //Give the li element a class name to hide them
         newListItem.className += 'hide letter';

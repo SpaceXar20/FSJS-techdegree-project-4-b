@@ -4,7 +4,7 @@ const game = new Game()
 //-adds event listeners for the onscreen keyboard 
 // I used this piece of code as a referance: https://www.w3schools.com/jsref/met_element_addeventlistener.asp
 document.getElementById('qwerty').addEventListener("click", function(){
-
+alert('you clicked the keyboard');
 });
 
 /*Add an event listener to the "Start Game" button which calls the resetDisplay() function,
