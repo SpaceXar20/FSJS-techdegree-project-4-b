@@ -26,15 +26,14 @@ class Phrase { //The class should include a constructor that accepts a phrase as
             //I set the context of the list items as element
             newListItem.textContent = element
 
-            /*If the element parameter does not equal to a blank space then add a class named hide letter,
-             otherwise if there is a blank space then add a class called space*/
+            /*If the element parameter does not equal to a blank space then add a class named 'hide letter',
+             otherwise if there is a blank space then add a class called 'hide space'*/
         
-            if (element !== '') {
+            if (element !== ' ') {
                newListItem.className = 'hide letter';
-           } else {
-               newListItem.className = 'hide space';
-           }
-        } );
+           } else  
+            newListItem.className = 'hide space';
+        });
 
        
         /*if the player matches a letter, the empty box is replaced with the matched letter
