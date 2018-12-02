@@ -8,27 +8,43 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     addPhraseToDisplay() {
         //I used the following video as a reference: https://www.youtube.com/watch?v=e0ihEHxd6vI
 
-       //Create a reference to ul element
-        const myList = document.getElementById('myList');
+        //create a variable for this.phrase
+        const phraseVariable = this.phrase;
 
-        //Crete new list items
-        let newListItem = document.createElement('li');
-        newListItem.textContent =  game.getRandomPhrase();
+        //Use (forEach) to loop through the phrases array
+        phraseVariable.forEach(element => {
 
-        //Give the li element a class name to hide them
-        newListItem.className += 'hide letter';
+            //Create a reference to ul element
+            const myList = document.querySelector('#phrase ul');
 
-        //Append the created li element to ul element
-        myList.appendChild(newListItem);
+            //Crete new list items
+            let newListItem = document.createElement('li'); 
 
-       /*if the player matches a letter, the empty box is replaced with the matched letter
+             //Append the created li element to ul element
+            myList.appendChild(newListItem);
+
+            //I set the context of the list items as element
+            newListItem.textContent = element
+
+            /*If the element parameter does not equal to a blank space then add a class named hide letter,
+             otherwise if there is a blank space then add a class called space*/
+        
+            if (element !== '') {
+               newListItem.className = 'hide letter';
+           } else {
+               newListItem.className = 'hide space';
+           }
+        } );
+
+       
+        /*if the player matches a letter, the empty box is replaced with the matched letter
        I think I will have to call the showMatchedLetter when theres a match
        */   
-      const player = document.getElementById('qwerty');
+     // const player = document.getElementById('qwerty');
       //if the keyboard includes a value from the phrases array, then call showMatchedLetter()
-        if(player.includes(this.phrases)) {
-            this.showMatchedLetter();
-        }
+            // if(player.includes(game.phrases)) {
+            //  this.showMatchedLetter();
+            // }
     }
 
     // this method checks to see if letter selected by player matches a letter in the phrase

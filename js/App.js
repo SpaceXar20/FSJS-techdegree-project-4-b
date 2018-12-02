@@ -1,10 +1,13 @@
 /*-This file creates a new instance of the Game class, */
 const game = new Game() 
 
+//this is the phrase array which will bw called on the addphrase to dispaly method
+const phrases = ["life is strange","success does not come easy", "seven swans swimming", "guess the word", "wild goose chase"]
+
 //-adds event listeners for the onscreen keyboard 
 // I used this piece of code as a referance: https://www.w3schools.com/jsref/met_element_addeventlistener.asp
 document.getElementById('qwerty').addEventListener("click", function(){
-alert('you clicked the keyboard');
+// alert('you clicked the keyboard');
 });
 
 /*Add an event listener to the "Start Game" button which calls the resetDisplay() function,

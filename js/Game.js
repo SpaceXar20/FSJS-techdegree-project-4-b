@@ -1,7 +1,7 @@
 class Game {
-    constructor() {
+    constructor(missed, phrases) {
         this.missed = 0; // this property will be used as a counter for the total of 5 tries
-        this.phrases = ["life is strange","success does not come easy", "seven swans swimming", "guess the word", "wild goose chase"] 
+        this.phrases = phrases; 
     }
 
     //this method randomly retrieves one of the phrases stored in the phrases array.
@@ -9,8 +9,10 @@ class Game {
     getRandomPhrase() { //I used a code snippet from this webiste https://medium.freecodecamp.org/creating-a-bare-bones-quote-generator-with-javascript-and-html-for-absolute-beginners-5264e1725f08
         
         //I made a variable and named it randomPhrase, I use the math floor and random methods to get a random whole number from the phrases array
-        const randomPhrase = Math.floor(Math.random() * (this.phrases.length));
+        const randomPhrase = phrases[Math.floor(Math.random() * (phrases.length))];
         console.log(randomPhrase);
+        return randomPhrase.split('');
+        
     }
 
     /*this method checks to see if the button clicked by the player matches a letter in the phrase.
