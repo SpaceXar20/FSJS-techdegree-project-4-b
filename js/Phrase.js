@@ -51,12 +51,11 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
     //if there was a match on the checkLetter method, then add a show letter class to the lis items
-
-        //I used a code snippet from here https://stackoverflow.com/questions/16367012/finding-a-specific-character-in-an-array
-        phrases.forEach(function(){
-            if(phraseVariable[arrayIndex].match(''));
-            alert(phraseVariable[arrayIndex]);
-        });
+        if (checkLetter === true) {
+            newListItem.className = 'show letter';
+        }
+        
+        
     }
 
 }
