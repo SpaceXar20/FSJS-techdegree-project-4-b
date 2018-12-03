@@ -1,7 +1,7 @@
 class Phrase { //The class should include a constructor that accepts a phrase as an argument
     constructor(phrase) {
-        this.phrase = phrase; //this property should convert the phrase to all lower case
-        this.letterCount; //this is number of letters inside the phrase (excluding spaces,punctuation,etc)
+        this.phrase = phrase; 
+        //this.letterCount; //this is number of letters inside the phrase (excluding spaces,punctuation,etc)
     }
 
     //this method adds letter placeholders to the display when the game starts
@@ -37,19 +37,12 @@ class Phrase { //The class should include a constructor that accepts a phrase as
         });
 
        
-        /*if the player matches a letter, the empty box is replaced with the matched letter
-       I think I will have to call the showMatchedLetter when theres a match
-       */   
-    //  const player = document.getElementById('qwerty');
-    //   //if the keyboard includes a value from the phrases array, then call showMatchedLetter()
-    //         if (player.includes('phraseVariable')) {
-    //          this.showMatchedLetter();
-    //         }
+
      }
 
     // this method checks to see if letter selected by player matches a letter in the phrase
     checkLetter() {
-    const individualKeys = document.getElementById('key')
+    const individualKeys = document.getElementsByClassName('key')
     if (individualKeys.includes('phraseVariable')) {
         return true;
      } 
