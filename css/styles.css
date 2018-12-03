@@ -142,11 +142,11 @@ button {
   justify-content: center;
 }
 
-.chosen {
-  background: #3a3f58;
+.chosen { /* When the buttons are chosen the color will change*/
+  background: transparent;
   border-radius: 5px;
   font-size: var(--font-size-medium);
-  color: #FFFFFF;
+  color: red;
 }
 
 .wrong {
