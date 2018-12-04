@@ -40,13 +40,23 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
      }
 
-    // this method checks to see if letter selected by player matches a letter in the phrase
+    /* this method checks to see if letter selected by player matches a letter in the phrase
+
+        Use a loop to iterate the array and check the phrase for whether the letter is in said phrase.
+        if the letter is in the phrase,call the showMatchedLetter() method
+
+        I used a regex snippet from this source https://stackoverflow.com/questions/3532053/regular-expression-for-only-characters-a-z-a-z
+      */
     checkLetter() {
-    const individualKeys = document.getElementsByClassName('key')
-    if (individualKeys.includes('phraseVariable')) {
-        return true;
+        for (var i=0; i < phrases.length; i++) {
+            //if the phrase contains a letter from the phrases array return true
+           if(phrases.includes(/^[a-zA-Z]*$/)) {
+            return true
+           }
+            
+        } 
      } 
-    }
+    
 
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
