@@ -1,7 +1,7 @@
 class Phrase { //The class should include a constructor that accepts a phrase as an argument
     constructor(phrase) {
-        this.phrase = phrase; 
-        //this.letterCount; //this is number of letters inside the phrase (excluding spaces,punctuation,etc)
+        this.phrase = phrase; //This is the actual phrase the Phrase object is represented. This property should convert the phrase to all lower case
+        this.letterCount; //this is number of letters inside the phrase (excluding spaces,punctuation,etc)
     }
 
     //this method adds letter placeholders to the display when the game starts
@@ -45,16 +45,22 @@ class Phrase { //The class should include a constructor that accepts a phrase as
         Use a loop to iterate the array and check the phrase for whether the letter is in said phrase.
         if the letter is in the phrase,call the showMatchedLetter() method
 
-        I used a regex snippet from this source https://stackoverflow.com/questions/3532053/regular-expression-for-only-characters-a-z-a-z
+        I received help from a fellow tech-degree student on checkletter(), his name is dalyn small
       */
-    checkLetter() {
-        for (var i=0; i < phrases.length; i++) {
-            //if the phrase contains a letter from the phrases array return true
-           if(phrases.includes(/^[a-zA-Z]*$/)) {
-            return true
+    checkLetter(phrases) {
+        //give the letter class a variable named letters
+        var letters = $('.letter');
+        for (var i=0; i < letters.length; i++) {
+            //if the phrase contains a letter from the phrases array return true, otherwise it will return false
+           if(phrases.toUpperCase() === letter[i].textContent) {
+            game.missed += 1;
            }
             
-        } 
+        } if (game.missed > 0) {
+            return true;
+        } else {
+            return false;
+        }
      } 
     
 

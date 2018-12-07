@@ -1,10 +1,6 @@
 /*-This file creates a new instance of the Game class, */
 const game = new Game() 
 
-//this is the phrase array which will be called on the getRandomPhrase() from game.js
-const phrases = ["life is strange","success does not come easy", "seven swans swimming", "guess the word", "wild goose chase"]
-
-
 
 /*Add an event listener to the "Start Game" button which calls the resetDisplay() function,
  creates a new Game object, 
