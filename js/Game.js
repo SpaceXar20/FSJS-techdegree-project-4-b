@@ -2,7 +2,7 @@ class Game {
     constructor() {
         this.missed = 0; // this property will be used as a counter for the total of 5 tries
         this.phrases = ["life is strange","success does not come easy", "seven swans swimming", "guess the word", "wild goose chase"];;
-        this.activePhrase = null; 
+        this.activePhrase = null;
     }
 
     //This method should create and then return an array with 5 new Phrase objects.
@@ -34,7 +34,7 @@ class Game {
         and the letter will be shown by calling showedMatchedLetter()
         */
         if (phrase.checkLetter === true) {
-            this.checkForWin();this.showedMatchedLetter();
+            this.checkForWin();phrase.showMatchedLetter();
 
         } //if the player didn't match a letter, the game will remove a heart life by calling removelife method and add 1 to the missed property
           else {

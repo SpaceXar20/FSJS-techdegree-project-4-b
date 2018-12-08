@@ -52,7 +52,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
         var letters = $('.letter');
        for (var i=0; i < letters.length; i++) {
             //if the phrase contains a letter from the phrases array return true, otherwise it will return false
-           if(this.phrase === letters[i].textContent) {
+           if(game.phrases === letters[i].textContent) {
             return true
            }
            else return false
