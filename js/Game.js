@@ -33,7 +33,7 @@ class Game {
         /*if the player matched a letter, the checkforwin method will be called 
         and the letter will be shown by calling showedMatchedLetter()
         */
-        if (Game.checkLetter === true) {
+        if (phrase.checkLetter === true) {
             this.checkForWin();this.showedMatchedLetter();
 
         } //if the player didn't match a letter, the game will remove a heart life by calling removelife method and add 1 to the missed property
