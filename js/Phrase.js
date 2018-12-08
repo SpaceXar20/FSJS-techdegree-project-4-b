@@ -27,11 +27,11 @@ class Phrase { //The class should include a constructor that accepts a phrase as
             //I set the context of the list items as element
             newListItem.textContent = element
 
-            /*If the element parameter does not equal to a blank space then add a class named 'hide letter',
+            /*If the element parameter does not equal to a blank space then add a class named 'letter' located in css file,
              otherwise if there is a blank space then add a class called 'hide space'*/
         
             if (element !== ' ') {
-               newListItem.className = 'hide letter';
+               newListItem.className = 'letter';
            } else  
             newListItem.className = 'hide space';
         });
@@ -45,30 +45,25 @@ class Phrase { //The class should include a constructor that accepts a phrase as
         Use a loop to iterate the array and check the phrase for whether the letter is in said phrase.
         if the letter is in the phrase,call the showMatchedLetter() method
 
-        I received help from a fellow tech-degree student on checkletter(), his name is dalyn small
+        I received help from a fellow tech-degree student on checkletter() but I am unsure if I did the method right
       */
-    checkLetter(phrases) {
-        //give the letter class a variable named letters
+    checkLetter() {
+        //give the letter class a variable named letters to have a reference to them
         var letters = $('.letter');
-        for (var i=0; i < letters.length; i++) {
+       for (var i=0; i < letters.length; i++) {
             //if the phrase contains a letter from the phrases array return true, otherwise it will return false
-           if(phrases.toUpperCase() === letter[i].textContent) {
-            game.missed += 1;
+           if(this.phrase === letters[i].textContent) {
+            return true
            }
-            
-        } if (game.missed > 0) {
-            return true;
-        } else {
-            return false;
-        }
-     } 
-    
+           else return false
+        } 
+    }
 
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
     //if there was a match on the checkLetter method, then add a show letter class to the lis items
         if (checkLetter === true) {
-            newListItem.className = 'show letter';
+            newListItem.className = 'show';
         }
         
         

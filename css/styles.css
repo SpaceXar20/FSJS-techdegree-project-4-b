@@ -104,6 +104,7 @@ button {
 
 /* Phrase */
 
+/* The hidden letters of the phrases are transparent*/
 .letter {
   font-size: var(--font-size-medium);
   height: 65px;
@@ -120,7 +121,7 @@ button {
 }
 
 
-
+/* I will use this class to show the letters if the players guess right */
 .show {
   color: #fff;
   background-color: #4ac0d5;

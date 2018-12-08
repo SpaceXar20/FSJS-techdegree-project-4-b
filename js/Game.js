@@ -7,9 +7,11 @@ class Game {
 
     //This method should create and then return an array with 5 new Phrase objects.
 
-    createPhrases() {
-        return this.phrases
-    }
+    // createPhrases() {
+    //     const phrase1 = new Phrase(this.phrases); 
+
+    //     return this.phrases
+    // }
 
     //this method randomly retrieves one of the phrases stored in the phrases array.
 
@@ -31,7 +33,7 @@ class Game {
         /*if the player matched a letter, the checkforwin method will be called 
         and the letter will be shown by calling showedMatchedLetter()
         */
-        if (Phrase.checkLetter === true) {
+        if (Game.checkLetter === true) {
             this.checkForWin();this.showedMatchedLetter();
 
         } //if the player didn't match a letter, the game will remove a heart life by calling removelife method and add 1 to the missed property
