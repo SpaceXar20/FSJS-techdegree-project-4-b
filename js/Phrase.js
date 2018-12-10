@@ -19,7 +19,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
             const myList = document.querySelector('#phrase ul');
 
             //Crete new list items
-            let newListItem = document.createElement('li'); 
+            let newListItem = document.createElement('li');
 
              //Append the created li element to ul element
             myList.appendChild(newListItem);
@@ -29,14 +29,14 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
             /*If the element parameter does not equal to a blank space then add a class named 'letter' located in css file,
              otherwise if there is a blank space then add a class called 'hide space'*/
-        
+
             if (element !== ' ') {
-               newListItem.className = 'letter';
-           } else  
+               newListItem.className = 'hide letter';
+           } else
             newListItem.className = 'hide space';
         });
 
-       
+
 
      }
 
@@ -47,26 +47,44 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
         I received help from a fellow tech-degree student on checkletter() but I am unsure if I did the method right
       */
-    checkLetter() {
+    checkLetter(letter) {
         //give the letter class a variable named letters to have a reference to them
         var letters = $('.letter');
-       for (var i=0; i < letters.length; i++) {
-            //if the phrase contains a letter from the phrases array return true, otherwise it will return false
-           if(game.phrases === letters[i].textContent) {
-            return true
-           }
-           else return false
-        } 
+    //     //loop through each letter
+
+    $( ".letter" ).each(function( index ) {
+        if(letter === $( this ).html()) {
+                console.log('this is true')
+                return false; // this will stop the execution
+               } 
+        });
+
+
+
+
+
+
+    
+ //This code is only targeting the first letter in a phrase but not all
+        // for (var i=0; i < letters.length; i++) {
+        //    console.log(letters[i].innerHTML);
+        //     //if the phrase contains a letter from the letters, return true, otherwise it will return false
+        //    if(letter === letters[i].innerHTML) {
+        //     console.log('this is true')
+        //     return true
+        //    }
+        //    else return false
+        // }
     }
 
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
     //if there was a match on the checkLetter method, then add a show letter class to the lis items
-        if (checkLetter === true) {
-            newListItem.className = 'show';
+        if (this.checkLetter === true) {
+            newListItem.className = 'show letter';
         }
-        
-        
+
+
     }
 
 }
