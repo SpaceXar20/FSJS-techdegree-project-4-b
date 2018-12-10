@@ -61,7 +61,7 @@ class Game {
     }
 
     /*this method checks to see if the player has selected all of the letters.
-    call removeforlife()
+    
     */
 
     checkForWin() {

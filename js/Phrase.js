@@ -31,7 +31,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
              otherwise if there is a blank space then add a class called 'hide space'*/
 
             if (element !== ' ') {
-               newListItem.className = 'hide letter';
+               newListItem.className = 'letter';
            } else
             newListItem.className = 'hide space';
         });
@@ -42,46 +42,29 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
     /* this method checks to see if letter selected by player matches a letter in the phrase
 
-        Use a loop to iterate the array and check the phrase for whether the letter is in said phrase.
+        Use a loop to iterate the letters and check the phrase for whether the letter is in said phrase.
         if the letter is in the phrase,call the showMatchedLetter() method
 
-        I received help from a fellow tech-degree student on checkletter() but I am unsure if I did the method right
+        I used a code snippet from this source= https://stackoverflow.com/questions/53698897/i-am-having-trouble-converting-a-for-loop-to-a-foreach-loop/53698926#53698926
       */
-    checkLetter(letter) {
-        //give the letter class a variable named letters to have a reference to them
+     checkLetter(e) {
         var letters = $('.letter');
-    //     //loop through each letter
-
-    $( ".letter" ).each(function( index ) {
-        if(letter === $( this ).html()) {
-                console.log('this is true')
-                return false; // this will stop the execution
-               } 
-        });
-
-
-
-
-
-
-    
- //This code is only targeting the first letter in a phrase but not all
-        // for (var i=0; i < letters.length; i++) {
-        //    console.log(letters[i].innerHTML);
-        //     //if the phrase contains a letter from the letters, return true, otherwise it will return false
-        //    if(letter === letters[i].innerHTML) {
-        //     console.log('this is true')
-        //     return true
-        //    }
-        //    else return false
-        // }
+  
+        let foundLetter = false;
+        letters.each((i, letterElement) => {
+        if ($(letterElement).text() === e) {
+            console.log('this is true')
+        foundLetter = true;
     }
-
+  });
+  return foundLetter;
+}
+        
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
     //if there was a match on the checkLetter method, then add a show letter class to the lis items
         if (this.checkLetter === true) {
-            newListItem.className = 'show letter';
+            document.getElementsByClassName('letter').className = 'show letter';
         }
 
 
