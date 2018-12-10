@@ -62,7 +62,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
         
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
-    //if there was a match on the checkLetter method, then add a show letter class to the lis items
+    //if there was a match on the checkLetter method, then add a show letter class to letters
         if (this.checkLetter === true) {
             document.getElementsByClassName('letter').className = 'show letter';
         }
