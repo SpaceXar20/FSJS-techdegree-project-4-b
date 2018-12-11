@@ -49,25 +49,26 @@ class Phrase { //The class should include a constructor that accepts a phrase as
       */
      checkLetter(e) {
         var letters = $('.letter');
-  
+
         let foundLetter = false;
         letters.each((i, letterElement) => {
         if ($(letterElement).text() === e) {
             console.log('this is true')
+            this.showMatchedLetter();
         foundLetter = true;
     }
   });
   return foundLetter;
 }
-        
+
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
-    //if there was a match on the checkLetter method, then add a show letter class to letters
-        if (this.checkLetter === true) {
-            document.getElementsByClassName('letter').className = 'show letter';
+    //if there was a match on the checkLetter method, then add a show letter class
+        
+            $('.letter').addClass('show letter');
         }
 
 
-    }
+    
 
 }
