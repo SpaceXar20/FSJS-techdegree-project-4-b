@@ -45,7 +45,7 @@ class Game {
               this.removeLife();
               this.missed  += 1;
           }
-
+          
     }
 
     /*this method removes a life,
