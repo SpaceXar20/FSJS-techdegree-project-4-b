@@ -47,14 +47,14 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
         I used a code snippet from this source= https://stackoverflow.com/questions/53698897/i-am-having-trouble-converting-a-for-loop-to-a-foreach-loop/53698926#53698926
       */
-     checkLetter(e) {
+     checkLetter(letter) {
         var letters = $('.letter');
 
         let foundLetter = false;
         letters.each((i, letterElement) => {
-        if ($(letterElement).text() === e) {
+        if ($(letterElement).text() === letter) {
            console.log('this is true')
-            
+
         foundLetter = true;
     }
   });
@@ -64,17 +64,17 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
     //if there was a match on the checkLetter method, then add a show letter class
-    //  $('.letter').addClass('show letter');
-     
-    //give phrase array a variable to have a reference to it 
-    const phraseArray = this.phrase;
-     
-    /*use a forEach method to loop through the array of Phrase characters, 
-    and compare each char to the letter that was selected by the player.
-    */
-    phraseArray.forEach(element => {
-        console.log(element);
-    });
-        
+     $('.letter').addClass('show letter');
+
+    // //give phrase array a variable to have a reference to it
+    // const phraseArray = this.phrase;
+
+    // /*use a forEach method to loop through the array of Phrase characters,
+    // and compare each char to the letter that was selected by the player.
+    // */
+    // phraseArray.forEach(element => {
+    //     console.log(element);
+    // });
+
         }
 }

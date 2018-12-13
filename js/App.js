@@ -5,9 +5,12 @@ const game = new Game()
 /*Add an event listener to the "Start Game" button which calls the resetDisplay() function,
  creates a new Game object,
  and starts the game. */
-document.getElementById('btn__reset').addEventListener("click", function(){
+$('#btn__reset').on('click',  (event) => {
     resetDisplay();
-});
+    game.startGame();
+})
+
+
 
 
 //this function hides the start screen overlay.
