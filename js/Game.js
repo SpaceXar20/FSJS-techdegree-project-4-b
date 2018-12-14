@@ -2,7 +2,7 @@ const phrase = new Phrase()
 class Game {
     constructor() {
         this.missed = 0; // this property will be used as a counter for the total of 5 tries
-        this.phrases = ["life is strange","success does not come easy", "seven swans swimming", "guess the word", "wild goose chase"];;
+        this.phrases = ["life is strange","success does not come easy", "seven swans swimming", "guess the word", "wild goose chase"];
         this.activePhrase = null;
 
     }

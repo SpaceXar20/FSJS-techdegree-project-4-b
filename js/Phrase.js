@@ -11,7 +11,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
         //create a variable for this.phrase
         const phraseVariable = this.phrase;
-
+        //console.log(phraseVariable);
         //Use (forEach) to loop through the phrases array
         phraseVariable.forEach(element => {
 
