@@ -16,9 +16,10 @@
   --transition: all .2s ease-in-out;
 }
 
-#game-over-message { /* The message when the player loses is hidden initially */
+/* #game-over-message { /* The message when the player loses is hidden initially 
   display: none;
-}
+} 
+*/
 
 .game-won-message { /* The message is hidden until the player actually wins */
   display: none;
@@ -209,7 +210,7 @@ button {
 }
 
 .lose {
-  background-color: #f5785f;
+  background-color: #fc1313;
 }
 
 .lose a {

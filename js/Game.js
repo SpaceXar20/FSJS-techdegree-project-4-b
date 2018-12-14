@@ -17,7 +17,7 @@ class Game {
 
     //this method randomly retrieves one of the phrases stored in the phrases array.
 
-    getRandomPhrase() { //I used a code snippet from this webiste https://medium.freecodecamp.org/creating-a-bare-bones-quote-generator-with-javascript-and-html-for-absolute-beginners-5264e1725f08
+    getRandomPhrase() { //I used a code snippet from this website https://medium.freecodecamp.org/creating-a-bare-bones-quote-generator-with-javascript-and-html-for-absolute-beginners-5264e1725f08
 
         //I made a variable and named it randomPhrase, I use the math floor and random methods to get a random whole number from the phrases array that I made on app.js
         const randomPhrase = this.phrases[Math.floor(Math.random() * (this.phrases.length))];
@@ -83,15 +83,15 @@ class Game {
 
     //this method displays a message if the player wins or a different message if they lose.
     gameOver() {
-        //if the player misses 5 times, display the game over mesage from index.html
+        //if the player misses 5 times, display the game over message from index.html
         if (this.missed === 5) {
             $('#game-over-message').text('Game Over You Lost'); //I used a code snippet from this source https://stackoverflow.com/questions/7420109/what-does-style-display-actually-do
-            $('#overlay').show().addClass('You Lost');
+            $('#overlay').show().addClass('lose a');
             $('#btn__reset').text('Try Again!!');
 
-        } else {
+        } else if (this.missed === 0)  {
             $('#game-over-message').text('You won!');
-            $('#overlay').show();
+            $('#overlay').show().addClass('win');
             $('#btn__reset').text('Try Again!');
         }
 
