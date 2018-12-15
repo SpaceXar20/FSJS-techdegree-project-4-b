@@ -72,27 +72,33 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     showMatchedLetter(letter) {
     //if there was a match on the checkLetter method, then add a show letter class
 
-    //this works but all the letters show up instead of just the matched ones
-    //  $('.letter').addClass('show letter');
-
         //grab letters and put them in a variable
       var compareLetters =  $('.letter');
 
-        //I created a new game instance in order to access the array property for the loop below
-const game = new Game()
-
-     //give phrase array a variable to have a reference to it
-     const phraseArray = game.phrases;
-     console.log(phraseArray)
-
-     /*use a each method to loop through the array of Phrase characters,
+    /*use a each method to loop through the array of Phrase characters,
     and compare each char to the letter that was selected by the player.
     */
-    compareLetters.each((i, compareLetters) => {
-    if ($(compareLetters).text() === letter) {
-        $('.letter').addClass('show letter');
-    }
-        });
+    $('.letter').each(function() {
+        if ($(this).text() === letter) {
+            $(this).addClass('show');
+        }
+    })
+
+
+    //below was what I originally had on this method, I had the right idea on trying to loop through the letters and array to compare them if they matched but that strategy was not ideal, so I visited stack overflow for help
+    //https://stackoverflow.com/questions/53789081/how-to-select-matching-values-in-jquery/53789137#53789137
+
+    //I had created a new game instance in order to access the array property for the loop below
+//const game = new Game()
+
+//give phrase array a variable to have a reference to it
+// const phraseArray = game.phrases;
+// console.log(phraseArray)
+// compareLetters.each((i, compareLetters) => {
+//     if ($(compareLetters).text() === letter) {
+//         $('.letter').addClass('show letter');
+//     }
+//         });
     
  }
 
