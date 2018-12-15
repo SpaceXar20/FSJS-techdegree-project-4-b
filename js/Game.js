@@ -93,9 +93,10 @@ class Game {
              
             
 
-        } else if (this.checkForWin === true || this.missed < 5)  {
+        } else if (this.checkForWin() === true)  {
             $('#game-over-message').text('You won!');
-            $('#overlay').show().addClass('win a');
+            $('#overlay').show().addClass('win');
+            console.log('the screen should turn green')
             $('#btn__reset').text('Try Again!');
            
             
