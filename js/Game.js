@@ -74,6 +74,7 @@ class Game {
     const match  = $('.letter.show').length;
     //if the length of the empty boxes is equal to the length of the displayed boxes then return true
       if (phraseMatch === match) {
+          console.log(phraseMatch + match + ' (the player has chosen all letters in the phrase')
         return true
       }
 
@@ -92,9 +93,9 @@ class Game {
              
             
 
-        } else if (this.checkForWin === true)  {
+        } else if (this.checkForWin === true || this.missed < 5)  {
             $('#game-over-message').text('You won!');
-            $('#overlay').show().addClass('win');
+            $('#overlay').show().addClass('win a');
             $('#btn__reset').text('Try Again!');
            
             
@@ -112,8 +113,8 @@ class Game {
 
 
 //use a method to create new instances of the Phrase class
-const phrase = new
- Phrase(this.getRandomPhrase());
+const phrase = new Phrase
+(this.getRandomPhrase());
       phrase.addPhraseToDisplay();
       return this.getRandomPhrase();
       
