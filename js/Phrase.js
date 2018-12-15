@@ -88,9 +88,9 @@ const game = new Game()
      /*use a each method to loop through the array of Phrase characters,
     and compare each char to the letter that was selected by the player.
     */
-    phraseArray.each((i, compareLetters) => {
+    compareLetters.each((i, compareLetters) => {
     if ($(compareLetters).text() === letter) {
-        (this).addClass('show letter');
+        $('.letter').addClass('show letter');
     }
         });
     
