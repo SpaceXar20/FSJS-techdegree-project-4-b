@@ -4,7 +4,7 @@
 class Phrase { //The class should include a constructor that accepts a phrase as an argument
     constructor(phrase) {
         this.phrase = phrase; //This is the actual phrase the Phrase object is represented. This property should convert the phrase to all lower case
-        //console.log(this.phrase);
+        console.log(this.phrase + " (this is the phrase brought from game.js");
         //this.letterCount; //this is number of letters inside the phrase (excluding spaces,punctuation,etc)
     }
 
@@ -15,7 +15,8 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 
         //create a variable for this.phrase
         const phraseVariable = this.phrase;
-        //console.log(phraseVariable);
+        //this is the random phrase from game.js
+        console.log(phraseVariable);
         //Use (forEach) to loop through the phrases array
         phraseVariable.forEach(element => {
 
@@ -52,11 +53,13 @@ class Phrase { //The class should include a constructor that accepts a phrase as
         I used a code snippet from this source= https://stackoverflow.com/questions/53698897/i-am-having-trouble-converting-a-for-loop-to-a-foreach-loop/53698926#53698926
       */
      checkLetter(letter) {
+         //this is the letter being clicked by the player
+         console.log(letter + " (this is the letter typed by the player)");
         var letters = $('.letter');
 
         let foundLetter = false;
-        letters.each((i, letterElement) => {
-        if ($(letterElement).text() === letter) {
+        letters.each((i, value) => {
+        if ($(value).text() === letter) {
            console.log('this is true')
 
         foundLetter = true;
@@ -66,7 +69,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
 }
 
     // the method below reveals the letter(s) on the board that matches player's selection.
-    showMatchedLetter() {
+    showMatchedLetter(letter) {
     //if there was a match on the checkLetter method, then add a show letter class
 
     //this works but all the letters show up instead of just the matched ones
@@ -80,17 +83,17 @@ const game = new Game()
 
      //give phrase array a variable to have a reference to it
      const phraseArray = game.phrases;
+     console.log(phraseArray)
 
-     /*use a forEach method to loop through the array of Phrase characters,
+     /*use a each method to loop through the array of Phrase characters,
     and compare each char to the letter that was selected by the player.
     */
-    phraseArray.forEach(element => {
-        if (compareLetters === this.checkLetter) {
-            $('.letter').addClass('show letter')
-        }
+    phraseArray.each((i, compareLetters) => {
+    if ($(compareLetters).text() === letter) {
+        (this).addClass('show letter');
+    }
+        });
+    
+ }
 
-        //console.log(element);
-    });
-
-        }
 }

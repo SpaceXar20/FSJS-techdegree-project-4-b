@@ -21,7 +21,8 @@ class Game {
 
         //I made a variable and named it randomPhrase, I use the math floor and random methods to get a random whole number from the phrases array that I made on app.js
         const randomPhrase = this.phrases[Math.floor(Math.random() * (this.phrases.length))];
-        console.log(randomPhrase);
+        //this is the random generated phrase
+        console.log(randomPhrase + ' (this is the random generated phrase)');
         return randomPhrase.split('');
 
 
