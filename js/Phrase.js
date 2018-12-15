@@ -1,7 +1,11 @@
+
+
+
 class Phrase { //The class should include a constructor that accepts a phrase as an argument
     constructor(phrase) {
         this.phrase = phrase; //This is the actual phrase the Phrase object is represented. This property should convert the phrase to all lower case
-        this.letterCount; //this is number of letters inside the phrase (excluding spaces,punctuation,etc)
+        //console.log(this.phrase);
+        //this.letterCount; //this is number of letters inside the phrase (excluding spaces,punctuation,etc)
     }
 
     //this method adds letter placeholders to the display when the game starts
@@ -64,17 +68,29 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     // the method below reveals the letter(s) on the board that matches player's selection.
     showMatchedLetter() {
     //if there was a match on the checkLetter method, then add a show letter class
-     $('.letter').addClass('show letter');
 
-    // //give phrase array a variable to have a reference to it
-    // const phraseArray = this.phrase;
+    //this works but all the letters show up instead of just the matched ones
+    //  $('.letter').addClass('show letter');
 
-    // /*use a forEach method to loop through the array of Phrase characters,
-    // and compare each char to the letter that was selected by the player.
-    // */
-    // phraseArray.forEach(element => {
-    //     console.log(element);
-    // });
+        //grab letters and put them in a variable
+      var compareLetters =  $('.letter');
+
+        //I created a new game instance in order to access the array property for the loop below
+const game = new Game()
+
+     //give phrase array a variable to have a reference to it
+     const phraseArray = game.phrases;
+
+     /*use a forEach method to loop through the array of Phrase characters,
+    and compare each char to the letter that was selected by the player.
+    */
+    phraseArray.forEach(element => {
+        if (compareLetters === this.checkLetter) {
+            $('.letter').addClass('show letter')
+        }
+
+        //console.log(element);
+    });
 
         }
 }

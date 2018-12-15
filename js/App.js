@@ -6,10 +6,11 @@ const game = new Game()
  creates a new Game object,
  and starts the game. */
  document.getElementById('btn__reset').addEventListener("click", function(){
-    resetDisplay();   
+    resetDisplay(); 
+    //game.startGame();  
  })
 
-
+//this works but this duplicates my phrases for some reason
 // $('#btn__reset').on('click',  (event) => {
 //     resetDisplay();
 //     game.startGame();
@@ -20,6 +21,7 @@ const game = new Game()
 
 //this function hides the start screen overlay.
 function resetDisplay() {
+    
     document.getElementById('overlay').style.display = 'none';
 }
 

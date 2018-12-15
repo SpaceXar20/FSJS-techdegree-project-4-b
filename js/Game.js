@@ -88,11 +88,17 @@ class Game {
             $('#game-over-message').text('Game Over You Lost'); //I used a code snippet from this source https://stackoverflow.com/questions/7420109/what-does-style-display-actually-do
             $('#overlay').show().addClass('lose a');
             $('#btn__reset').text('Try Again!!');
+            
+            
+             
+            
 
         } else if (this.missed === 0)  {
             $('#game-over-message').text('You won!');
             $('#overlay').show().addClass('win');
             $('#btn__reset').text('Try Again!');
+            
+             
         }
 
     }
@@ -100,11 +106,16 @@ class Game {
     /* this method calls the getRandomPhrase() method,
  and adds that phrase to the board by calling the Phrase class' addPhraseToDisplay() method. */
  startGame() {
+// this.getRandomPhrase();
+// phrase.addPhraseToDisplay();
+// return this.getRandomPhrase();
+
 
 //use a method to create new instances of the Phrase class
 const phrase = new
  Phrase(this.getRandomPhrase());
       phrase.addPhraseToDisplay();
       return this.getRandomPhrase();
+      
  }
 }
