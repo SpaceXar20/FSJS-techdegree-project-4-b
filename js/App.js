@@ -7,7 +7,8 @@ const game = new Game()
  and starts the game. */
  document.getElementById('btn__reset').addEventListener("click", function(){
     resetDisplay(); 
-    //game.startGame();  
+   
+    
  })
 
 //this works but this duplicates my phrases for some reason

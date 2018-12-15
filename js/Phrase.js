@@ -72,13 +72,13 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     showMatchedLetter(letter) {
     //if there was a match on the checkLetter method, then add a show letter class
 
-        //grab letters and put them in a variable
-      var compareLetters =  $('.letter');
+        
 
-    /*use a each method to loop through the array of Phrase characters,
-    and compare each char to the letter that was selected by the player.
+    /*use a each method to loop through the letters,
+    and compare the (letter) parameter to the letter that was selected by the player.
     */
     $('.letter').each(function() {
+        //(this) refers to the value of the inside of .letter.text 
         if ($(this).text() === letter) {
             $(this).addClass('show');
         }
