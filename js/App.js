@@ -38,7 +38,7 @@ $('#qwerty button').on("click", function(e){
 
 game.startGame();
 
-//Allow player to use physical keyboard to guess letters, I used a snippet from here https://stackoverflow.com/questions/53798806/need-assistance-to-press-letters-from-keyboard?noredirect=1#comment94447687_53798806
+//Allow player to use physical keyboard to guess letters, I used a snippet from here https://stackoverflow.com/questions/53798806/need-assistance-to-press-letters-from-keyboard?noredirect=1#comment94447687_53798806 By Nick Parson
 
 /*The keypress event makes it so that when you press a key it will get the element with the id equal to the letter in the html file,
  and it will then run the markButton()*/

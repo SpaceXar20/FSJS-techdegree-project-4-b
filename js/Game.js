@@ -2,7 +2,7 @@ const phrase = new Phrase()
 class Game {
     constructor() {
         this.missed = 0; // this property will be used as a counter for the total of 5 tries
-        this.phrases = ["life is strange","success does not come easy", "seven swans swimming", "guess the word", "wild goose chase"];
+        this.phrases = ["life is strange","success does not come easy", "seven swans swimming", "guess the word", "wild goose chase", "over nine thousand"];
         //this.activePhrase = null;
 
     }
@@ -88,6 +88,13 @@ class Game {
             $('#overlay').show().addClass('lose a');
             $('#btn__reset').text('Try Again!!');
             console.log('the screen should turn red')
+            /*this will make the button refresh the game in order to play gain
+            I used this resource https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+            */
+            $('#btn__reset').click(function() {
+                location.reload()
+            })
+            
             
             
              
@@ -96,8 +103,15 @@ class Game {
         } else if (this.checkForWin() === true)  {
             $('#game-over-message').text('You won!');
             $('#overlay').show().addClass('win');
-            console.log('the screen should turn green')
             $('#btn__reset').text('Try Again!');
+            console.log('the screen should turn green')
+            /*this will make the button refresh the game in order to play gain
+            I used this resource https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+            */
+            $('#btn__reset').click(function() {
+                location.reload()
+            })
+            
            
             
              

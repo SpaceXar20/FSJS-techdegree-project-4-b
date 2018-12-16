@@ -5,7 +5,7 @@ class Phrase { //The class should include a constructor that accepts a phrase as
     constructor(phrase) {
         this.phrase = phrase; //This is the actual phrase the Phrase object is represented. This property should convert the phrase to all lower case
         console.log(this.phrase + " (this is the phrase brought from game.js");
-        //this.letterCount; //this is number of letters inside the phrase (excluding spaces,punctuation,etc)
+        
     }
 
     //this method adds letter placeholders to the display when the game starts
