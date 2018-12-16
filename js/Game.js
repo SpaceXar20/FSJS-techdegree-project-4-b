@@ -42,7 +42,7 @@ class Game {
               this.removeLife();
 
           }
-
+          this.gameOver();
     }
 
     /*this method removes a life,
@@ -87,7 +87,7 @@ class Game {
             $('#game-over-message').text('Game Over You Lost'); //I used a code snippet from this source https://stackoverflow.com/questions/7420109/what-does-style-display-actually-do
             $('#overlay').show().addClass('lose a');
             $('#btn__reset').text('Try Again!!');
-            
+            console.log('the screen should turn red')
             
             
              
